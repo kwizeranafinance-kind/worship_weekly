@@ -3,13 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import LiveBadge from './LiveBadge';
+import { homeAnchor } from '@/lib/paths';
 
 const NAV_LINKS = [
-  { label: 'Live Stream', href: '#stream' },
-  { label: 'Radio', href: '#radio' },
-  { label: 'Schedule', href: '#schedule' },
-  { label: 'Platforms', href: '#platforms' },
-  { label: 'Community', href: '#community' },
+  { label: 'Live Stream', href: homeAnchor('stream') },
+  { label: 'Radio', href: homeAnchor('radio') },
+  { label: 'Schedule', href: homeAnchor('schedule') },
+  { label: 'Platforms', href: homeAnchor('platforms') },
+  { label: 'Community', href: homeAnchor('community') },
 ];
 
 export default function Navbar() {
@@ -18,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-ink-900/95 to-ink-900/85 backdrop-blur-xl border-b border-lavender-300/20 px-4 md:px-8 h-16 md:h-17 flex items-center justify-between">
       {/* Logo */}
-      <Link href="#" className="flex items-center gap-3 no-underline group">
+      <Link href="/" className="flex items-center gap-3 no-underline group">
         {/* Record SVG */}
         <div className="w-10 h-10 flex items-center justify-center drop-shadow-lg" style={{ filter: 'drop-shadow(0 0 8px rgba(109,40,217,0.7))' }}>
           <svg
@@ -61,11 +63,8 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* Live Badge */}
-      <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/30 text-sm font-semibold tracking-wider uppercase text-red-400">
-        <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse-red"></span>
-        On Air
-      </div>
+      {/* Live badge: only renders during a scheduled show with a stream configured */}
+      <LiveBadge />
 
       {/* Mobile Menu Button */}
       <button

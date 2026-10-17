@@ -119,7 +119,7 @@ export default function Hero() {
             🎵 &nbsp;Watch Live
           </Link>
           <Link href="#radio" className="btn btn-gold">
-            📻 &nbsp;Radio On Air
+            📻 &nbsp;Listen to the Station
           </Link>
           <Link href="#community" className="btn btn-outline">
             🙏 &nbsp;Join Community

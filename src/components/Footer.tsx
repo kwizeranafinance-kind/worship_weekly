@@ -1,13 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+import { homeAnchor } from '@/lib/paths';
 
 const NAV_LINKS = [
-  { label: 'Live Stream', href: '#stream' },
-  { label: 'Radio', href: '#radio' },
-  { label: 'Schedule', href: '#schedule' },
-  { label: 'Platforms', href: '#platforms' },
-  { label: 'Community', href: '#community' },
+  { label: 'Live Stream', href: homeAnchor('stream') },
+  { label: 'Radio', href: homeAnchor('radio') },
+  { label: 'Schedule', href: homeAnchor('schedule') },
+  { label: 'Platforms', href: homeAnchor('platforms') },
+  { label: 'Community', href: homeAnchor('community') },
 ];
 
 export default function Footer() {

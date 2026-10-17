@@ -151,3 +151,65 @@ input[type='range']::-moz-range-thumb {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+/* ─── STATION PLAYER (stained-glass section) ─────────── */
+.station-section {
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 30%, rgba(76, 29, 149, 0.35) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0118 0%, #1e0a35 45%, #0a0118 100%);
+}
+.station-glow {
+  width: min(900px, 160vw);
+  height: 900px;
+  background: radial-gradient(closest-side, rgba(252, 211, 77, 0.16), rgba(167, 139, 250, 0.1) 45%, transparent 75%);
+  filter: blur(10px);
+}
+.station-beams {
+  top: 520px;
+  width: min(820px, 130vw);
+  height: 700px;
+  background: conic-gradient(from 180deg at 50% 0%, transparent 155deg, rgba(252, 211, 77, 0.07) 168deg,
+      transparent 176deg, rgba(196, 181, 253, 0.06) 184deg, transparent 192deg, rgba(252, 211, 77, 0.06) 200deg, transparent 210deg);
+  filter: blur(6px);
+}
+.station-window {
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(252, 211, 77, 0.22)) drop-shadow(0 0 90px rgba(124, 58, 237, 0.25));
+}
+.station-card {
+  background: linear-gradient(180deg, rgba(20, 8, 40, 0.86), rgba(10, 1, 24, 0.9));
+  border: 1px solid rgba(252, 211, 77, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(252, 211, 77, 0.08);
+  backdrop-filter: blur(6px);
+}
+.listen-btn {
+  background: radial-gradient(circle at 35% 30%, #fff3c4 0%, #fcd34d 35%, #f59e0b 80%);
+  box-shadow: 0 0 0 6px rgba(252, 211, 77, 0.12), 0 10px 40px rgba(245, 158, 11, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.listen-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 8px rgba(252, 211, 77, 0.16), 0 14px 50px rgba(245, 158, 11, 0.45);
+}
+.listen-halo {
+  box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.35);
+}
+.listen-halo-on {
+  animation: halo-ring 2.4s ease-out infinite;
+}
+@keyframes halo-ring {
+  0% { box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.4); }
+  100% { box-shadow: 0 0 0 26px rgba(252, 211, 77, 0); }
+}
+.ctrl-btn {
+  @apply w-9 h-9 rounded-full inline-flex items-center justify-center border border-lavender-300/25 text-lavender-300 transition;
+}
+.ctrl-btn:hover:not(:disabled) {
+  @apply text-gold-300 border-gold-300/50;
+}
+.ctrl-btn:disabled {
+  @apply opacity-40 cursor-not-allowed;
+}
+@media (prefers-reduced-motion: reduce) {
+  .listen-halo-on { animation: none; }
+}

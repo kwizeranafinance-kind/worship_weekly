@@ -52,62 +52,7 @@ export const PLATFORM_URLS = {
   rumble: 'https://rumble.com',
 };
 
-export const SCHEDULE_SHOWS = [
-  {
-    id: 'monday-morning',
-    day: 'Monday',
-    name: 'Morning Worship Set',
-    time: '7:00 AM – 9:00 AM ET',
-    description: 'Begin your week with uplifting praise and worship to set a righteous, positive tone for the days ahead.',
-    tags: ['Worship', 'Live'],
-    duration: 120,
-  },
-  {
-    id: 'wednesday-healing',
-    day: 'Wednesday',
-    name: 'Midweek Healing Hour',
-    time: '7:00 PM – 9:00 PM ET',
-    description: 'Mid-week renewal and restoration — a sacred space of music for healing, peace, and spiritual refreshing.',
-    tags: ['Healing', 'Live'],
-    duration: 120,
-  },
-  {
-    id: 'friday-groove',
-    day: 'Friday',
-    name: 'Gospel Groove Friday',
-    time: '8:00 PM – 11:00 PM ET',
-    description: 'The main event — extended worship sets, live community praise, and special guests. The royal celebration.',
-    tags: ['Worship', 'Healing', 'Live'],
-    duration: 180,
-  },
-  {
-    id: 'saturday-deep',
-    day: 'Saturday',
-    name: 'Deep Roots Session',
-    time: '2:00 PM – 5:00 PM ET',
-    description: 'Gospel roots, soul, and spirit — a deep afternoon journey through the sacred tradition of worship music.',
-    tags: ['Worship', 'Live'],
-    duration: 180,
-  },
-  {
-    id: 'sunday-celebration',
-    day: 'Sunday',
-    name: 'Sunday Celebration Service',
-    time: '11:00 AM – 1:00 PM ET',
-    description: 'Our flagship Sunday experience — royal praise, community worship, and divine celebration to crown the week.',
-    tags: ['Worship', 'Healing', 'Live'],
-    duration: 120,
-  },
-  {
-    id: 'radio-24-7',
-    day: 'Daily',
-    name: 'Gospel Groove Radio',
-    time: '24 / 7',
-    description: 'When the live shows rest, the music never does. Healing worship streams around the clock — the spirit never sleeps.',
-    tags: ['Radio'],
-    duration: null,
-  },
-];
+// Weekly schedule moved to src/lib/station.ts (FEATURED_SETS / SCHEDULE).
 
 export const PLATFORMS = [
   {
@@ -196,32 +141,4 @@ export const VALUES = [
   { icon: '🤝', name: 'Community' },
 ];
 
-export const RADIO_PLAYLIST = [
-  {
-    id: 'track_001',
-    title: 'Amazing Grace',
-    artist: 'Hymn - Traditional',
-    album: 'Timeless Worship',
-    duration: 240,
-    artworkUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop',
-    audioUrl: 'https://assets.mixkit.co/active_storage/music/aaf22cc0-eaaf-4e58-8b41-4a3a92255ed8.mp3',
-  },
-  {
-    id: 'track_002',
-    title: 'What A Wonderful World',
-    artist: 'Gospel Choir',
-    album: 'Daily Inspiration',
-    duration: 210,
-    artworkUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop',
-    audioUrl: 'https://assets.mixkit.co/active_storage/music/aaf22cc0-eaaf-4e58-8b41-4a3a92255ed8.mp3',
-  },
-  {
-    id: 'track_003',
-    title: 'Oh Happy Day',
-    artist: 'Gospel Voices',
-    album: 'Uplifting Moments',
-    duration: 195,
-    artworkUrl: 'https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=400&h=400&fit=crop',
-    audioUrl: 'https://assets.mixkit.co/active_storage/music/aaf22cc0-eaaf-4e58-8b41-4a3a92255ed8.mp3',
-  },
-];
+// Radio playlist moved to src/lib/station.ts (STATION.fallbackPlaylist, public-domain recordings only).

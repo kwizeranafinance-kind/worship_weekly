@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { COMMUNITY_FEATURES, VALUES } from '@/lib/constants';
 
 export default function CommunitySection() {
@@ -19,22 +18,6 @@ export default function CommunitySection() {
         <p className="text-xl md:text-2xl font-garamond italic text-lavender-300 max-w-2xl mx-auto mb-12 leading-relaxed">
           "This is a holy and royal house — where every soul finds welcome, healing flows freely, and music becomes the language of heaven on earth."
         </p>
-
-        {/* Prayer Action Buttons */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center mb-16">
-          <Link
-            href="/pray-for-others"
-            className="btn btn-primary text-lg px-10 py-4"
-          >
-            🙏 &nbsp;Pray for Others
-          </Link>
-          <Link
-            href="/request-prayer"
-            className="btn btn-gold text-lg px-10 py-4"
-          >
-            💌 &nbsp;Request Prayer
-          </Link>
-        </div>
 
         {/* Community Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
